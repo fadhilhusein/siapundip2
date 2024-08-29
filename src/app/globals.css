@@ -1,33 +1,72 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+    font-family: "Space Grotesk", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: hsla(0, 0%, 0%, 1);
+    background-image:
+        radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+    animation: gradient 13s ease infinite;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+    border-radius: 15px;
+    background-color: rgb(0, 102, 255);
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    border-radius: 20px;
+    width: 150px;
+}
+
+span {
+    color: red;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    background-color: rgb(19, 19, 19);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 20%;
+	}
+	25% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 50% 70%;
+	}
+	100% {
+		background-position: 0% 20%;
+	}
 }
