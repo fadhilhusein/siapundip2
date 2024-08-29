@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "SiapUndip",
   description: "Download Siap Undip APK",
+  icons: {
+    icon: "next.svg"
+  }
 };
 
 export default function RootLayout({ children }) {

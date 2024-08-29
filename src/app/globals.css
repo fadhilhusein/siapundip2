@@ -32,7 +32,13 @@ a {
 }
 
 p {
+    color: white;
     text-align: center;
+}
+
+ol {
+  width: 80%;
+  color: white;
 }
 
 img {
